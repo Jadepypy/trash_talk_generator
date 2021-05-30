@@ -1,0 +1,72 @@
+<!--  ./views/index.handlebars -->
+<div class="container py-5">
+  <form method="POST" action="/">
+    <div class="row">
+      <h1 class="mx-auto text-light mb-5" id="la">你想對誰說幹話？</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="card-columns">
+          <div class="form-group">
+            <div class="card">
+              <label class="form-check-label" for="engineer">
+                <img class="card-img-top"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                  alt="Engineer">
+              </label>
+            </div>
+            <div class="form-check text-center text-light">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="engineer" value="engineer" 
+              {{#is object 'engineer'}} checked{{/is}}>
+              <label class="form-check-label" for="flexRadioDefault1">
+                工程師
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="card">
+              <label class="form-check-label" for="desinger">
+                <img class="card-img-top"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                  alt="Desinger">
+              </label>
+            </div>
+            <div class="form-check text-center text-light">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="desinger" value="designer" {{#is object 'designer'}} checked{{/is}}>
+              <label class="form-check-label" for="flexRadioDefault1">
+                設計師
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="card">
+              <label class="form-check-label" for="enterpreneur">
+                <img class="card-img-top"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                  alt="Enterpreneur">
+              </label>
+            </div>
+            <div class="form-check text-center text-light">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="enterpreneur" value="entrepreneur" {{#is object 'entrepreneur'}} checked{{/is}}>
+              <label class="form-check-label" for="flexRadioDefault1">
+                創業家
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <span>
+          <button class="btn btn-success" type="submit" style="display:inline;" style="vertical-align: top;">產生幹話</button>
+          
+          <textarea id="message" rows="3" style="width:89%; vertical-align: top;">{{#if trashTalk}}{{trashTalk}}{{/if}}</textarea>
+          
+        </span>
+      </div>
+    </div>         
+  </form>
+
+    
+</div>
